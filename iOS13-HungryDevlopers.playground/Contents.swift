@@ -37,14 +37,41 @@ class Developer {
     
     //eat() should pause for a random amount of time before putting both spoons down.
     func eat(){
-        usleep(1)
+        print("now we are eating")
+        usleep(1__00__00)
         rightSpoon.putDown()
         leftSpoon.putDown()
     }
     
     //Developer.run() should call think() then eat() over and over again forever.
     func run(){
+        while true {
         think()
         eat()
+        }
     }
 }
+
+
+
+//let num = 5
+//
+//var developers: [Developer] = []
+//var spoons: [Spoon] = []
+//for int in 0..<num {
+//    spoons.append(Spoon(index: int))
+//}
+//
+//for int in 0..<num {
+//    if int == 0 {
+//        developers.append(Developer(left: spoons[num-1], right: spoons[int+1]))
+//    } else if int == 4 {
+//        developers.append(Developer(left: spoons[int-1], right: spoons[0]))
+//    } else {
+//        developers.append(Developer(left: spoons[int-1], right: spoons[int+1]))
+//    }
+//}
+//
+//DispatchQueue.concurrentPerform(iterations: 5) {
+//    developers[$0].run()
+//}
